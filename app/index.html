@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/style.min.css" />
 	</head>
 
@@ -11,31 +17,34 @@
 		<div class="wrapper" id="app">
 			<header class="header">
 				<div class="container">
-					<h2>{{title}}</h2>
-					<ul class="header__nav-list">
-						<li class="header__nav-item">
-							<a href="#" class="header__nav-link"> Каталог </a>
-						</li>
-						<li class="header__nav-item">
-							<a href="#" class="header__nav-link"> Доставка </a>
-						</li>
-						<li class="header__nav-item">
-							<a href="#" class="header__nav-link"> Оплата </a>
-						</li>
-						<li class="header__nav-item">
-							<a href="#" class="header__nav-link"> контанты </a>
-						</li>
-						<li class="header__nav-item">
-							<a href="#" class="header__nav-link"> О компании </a>
-						</li>
-					</ul>
-					<div class="search-input">
-						<input type="text" class="search-input__input" />
-						<button class="search-input__btn">Найти</button>
+					<div class="header__inner">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-link"> Каталог </a>
+								</li>
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-link"> Доставка </a>
+								</li>
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-link"> Оплата </a>
+								</li>
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-link"> Контакты </a>
+								</li>
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-link"> О компании </a>
+								</li>
+							</ul>
+						</nav>
+						<div class="search-input">
+							<input type="text" class="search-input__input"  placeholder="Поиск по названию картины"/>
+							<button class="search-input__btn">Найти</button>
+						</div>
 					</div>
 				</div>
 			</header>
-			<div class="content">
+			<div class="main">
 				<div class="container">
 					<section class="art">
 						<h1 class="art__title">Картины эпохи Возрождения</h1>

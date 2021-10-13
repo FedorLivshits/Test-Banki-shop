@@ -1,8 +1,15 @@
 html,
 body {
+	font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #343030;
 	height: 100%;
 }
-
+a{
+    color: inherit;
+    cursor: pointer;
+}
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -16,13 +23,8 @@ body {
 	flex: 0 0 auto;
 }
 
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+.container {
+	max-width: 1246px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
-
-
-
-
-
