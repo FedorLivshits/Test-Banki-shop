@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+
+	<body>
+		<div class="wrapper" id="app">
+			<header class="header">
+				<div class="container">
+					<h2>{{title}}</h2>
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link"> Каталог </a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link"> Доставка </a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link"> Оплата </a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link"> контанты </a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link"> О компании </a>
+						</li>
+					</ul>
+					<div class="search-input">
+						<input type="text" class="search-input__input" />
+						<button class="search-input__btn">Найти</button>
+					</div>
+				</div>
+			</header>
+			<div class="content">
+				<div class="container">
+					<section class="art">
+						<h1 class="art__title">Картины эпохи Возрождения</h1>
+						<div class="art__card">
+							<img class="art__card-img" src="" alt="#" />
+							<div class="art__card-title">
+								"Рождение Венеры" Сандро Боттичелли
+							</div>
+							<div class="art__price">
+								<span class="art__price-last"> 2 000 000 $ </span>
+								<span class="art__price-current"> 1 000 000 $ </span>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<ul class="footer__list-items">
+						<li class="footer__list-item">
+							<a href="#" class="footer__list-link"></a>
+						</li>
+					</ul>
+					<div class="footer__info">
+						<div class="footer__info">
+							<div class="footer__info-phone">
+								<img src="" alt="#" class="footer__info-img" />
+								<span>+7 (812) 555-55-55</span>
+							</div>
+							<div class="footer__info-location">
+								<img src="" alt="#" class="footer__info-img" />
+								<span>г. Санкт-Петербург, ул. Ефимова, 3</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="https://unpkg.com/vue@next"></script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>
