@@ -38,7 +38,11 @@
 							</ul>
 						</nav>
 						<div class="search-input">
-							<input type="text" class="search-input__input"  placeholder="Поиск по названию картины"/>
+							<input
+								type="text"
+								class="search-input__input"
+								placeholder="Поиск по названию картины"
+							/>
 							<button class="search-input__btn">Найти</button>
 						</div>
 					</div>
@@ -49,13 +53,22 @@
 					<section class="art">
 						<h1 class="art__title">Картины эпохи Возрождения</h1>
 						<div class="art__card">
-							<img class="art__card-img" src="" alt="#" />
+							<img
+								class="art__card-img"
+								src="./images/painting-1.jpg"
+								alt="#"
+							/>
 							<div class="art__card-title">
-								"Рождение Венеры" Сандро Боттичелли
+								«Рождение Венеры» Сандро Боттичелли
 							</div>
-							<div class="art__price">
-								<span class="art__price-last"> 2 000 000 $ </span>
-								<span class="art__price-current"> 1 000 000 $ </span>
+							<div class="art__card-buy">
+								<div class="art__card-price">
+									<div class="art__card-price--last">
+										<span>2 000 000 $</span>
+									</div>
+									<div class="art__card-price">1 000 000 $</div>
+								</div>
+								<button class="art__card-btn">Купить</button>
 							</div>
 						</div>
 					</section>
@@ -63,20 +76,30 @@
 			</div>
 			<footer class="footer">
 				<div class="container">
-					<ul class="footer__list-items">
-						<li class="footer__list-item">
-							<a href="#" class="footer__list-link"></a>
-						</li>
-					</ul>
-					<div class="footer__info">
+					<div class="footer__inner">
+						<ul class="footer__list-items">
+							<li class="footer__list-item">
+								<a href="#" class="footer__list-link"></a>
+							</li>
+						</ul>
 						<div class="footer__info">
-							<div class="footer__info-phone">
-								<img src="" alt="#" class="footer__info-img" />
-								<span>+7 (812) 555-55-55</span>
-							</div>
-							<div class="footer__info-location">
-								<img src="" alt="#" class="footer__info-img" />
-								<span>г. Санкт-Петербург, ул. Ефимова, 3</span>
+							<div class="footer__info">
+								<div class="footer__info-item">
+									<img
+										src="./images/vector/phone.svg"
+										alt="phone"
+										class="footer__info-img"
+									/>
+									<a href="tel:123-456-7890">+7 (812) 555-55-55</a>
+								</div>
+								<div class="footer__info-item">
+									<img
+										src="./images/vector/location.svg"
+										alt="location"
+										class="footer__info-img"
+									/>
+									<span>г. Санкт-Петербург, ул. Ефимова, 3</span>
+								</div>
 							</div>
 						</div>
 					</div>
