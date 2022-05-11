@@ -54,10 +54,18 @@
 		margin-top: 45px;
 		margin-bottom: 39px;
 	}
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	&__card {
 		height: 328px;
 		width: 280px;
+		margin-right: 32px;
 		border: 1px solid #e1e1e1;
+		&:last-child {
+			margin-right: 0;
+		}
 		&--disabled {
 			pointer-events: none;
 			background: white;
@@ -70,10 +78,8 @@
 		&-title {
 			font-size: 18px;
 			line-height: 27px;
-			margin-top: 20px;
-			margin-bottom: 22px;
-			padding-left: 24px;
-			padding-right: 36px;
+			margin: 20px 36px 22px 24px;
+			cursor: pointer;
 		}
 		&-buy {
 			display: flex;
@@ -113,7 +119,26 @@
 		}
 	}
 }
-
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	&__window {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 40%;
+	}
+}
 .footer {
 	background: #eceaea;
 	&__inner {
@@ -138,5 +163,67 @@
 				margin-right: 9px;
 			}
 		}
+	}
+}
+
+/* Собственно сам слайдер */
+.slider {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+	margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+	object-fit: contain;
+	width: 100%;
+}
+/* Кнопки вперед и назад */
+.slider .prev,
+.slider .next {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+.slider .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Анимация слайдов */
+.slider .item {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
 	}
 }

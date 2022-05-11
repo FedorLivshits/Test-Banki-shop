@@ -5,10 +5,14 @@ body {
 	font-size: 14px;
 	color: #343030;
 	height: 100%;
+    overflow: hidden;
 }
 a {
 	color: inherit;
 	cursor: pointer;
+}
+[v-cloak] {
+	display: none;
 }
 .wrapper {
 	display: flex;

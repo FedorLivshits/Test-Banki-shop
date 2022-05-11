@@ -14,7 +14,7 @@
 	</head>
 
 	<body>
-		<div class="wrapper" id="app">
+		<div class="wrapper" id="app" v-cloak>
 			<header class="header">
 				<div class="container">
 					<div class="header__inner">
@@ -52,26 +52,67 @@
 				<div class="container">
 					<section class="art">
 						<h1 class="art__title">Картины эпохи Возрождения</h1>
-						<div class="art__card">
-							<img
-								class="art__card-img"
-								src="./images/painting-1.jpg"
-								alt="#"
-							/>
-							<div class="art__card-title">
-								«Рождение Венеры» Сандро Боттичелли
-							</div>
-							<div class="art__card-buy">
-								<div class="art__card-price">
-									<div class="art__card-price--last">
-										<span>2 000 000 $</span>
+						<div class="art__cards">
+							<div class="art__card" v-for="card in cards" :key="card.id">
+								<img class="art__card-img" :src="card.img" alt="#" />
+								<h2 class="art__card-title" v-text="card.title" ></h2>
+								<div class="art__card-buy" v-if="card.sale">
+									<div class="art__card-price">
+										<div class="art__card-price--last">
+											<span v-text="card.prevPrice"></span>
+										</div>
+										<div
+											class="art__card-price"
+											v-text="card.currentPrice"
+										></div>
 									</div>
-									<div class="art__card-price">1 000 000 $</div>
+									<button
+										class="art__card-btn"
+										@click="addToCart(card.id)"
+										v-if="!loading"
+									>
+										Купить
+									</button>
+									<button
+										class="art__card-btn"
+										@click="addToCart(card.id)"
+										v-else
+									>
+										Загрузка
+									</button>
 								</div>
-								<button class="art__card-btn">Купить</button>
+								<div class="sale" v-else>Продана на аукционе</div>
 							</div>
 						</div>
 					</section>
+				</div>
+				<div class="modal">
+					<div class="modal__window">
+						<div class="slider">
+							<div class="item">
+								<img src="./images/painting-1.jpg" alt="" />
+							</div>
+
+							<div class="item">
+								<img src="./images/painting-2.jpg" alt="" />
+							</div>
+
+							<a class="prev" @click="minusSlide()">&#10094;</a>
+							<a class="next" @click="plusSlide()">&#10095;</a>
+						</div>
+						<div class="modal__slider"></div>
+						<h2 class="modal__title">fdgsfsfs</h2>
+						<p class="modal__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							Recusandae, nam deserunt quisquam facere illum, ad velit magni
+							saepe iste consequuntur neque fugiat labore minus aut ea porro,
+							laboriosam natus tempore?
+						</p>
+						<div class="modal__buy">
+							<div class="art__card-price">300000</div>
+							<button class="art__card-btn">Купить</button>
+						</div>
+					</div>
 				</div>
 			</div>
 			<footer class="footer">
